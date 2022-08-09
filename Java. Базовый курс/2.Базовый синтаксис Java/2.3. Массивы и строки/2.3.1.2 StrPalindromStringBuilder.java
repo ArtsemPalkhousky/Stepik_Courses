@@ -1,12 +1,13 @@
 /**
- * Checks if given text</code> is a palindrome.
+ * Checks if given text is a palindrome.
+ *
  * @param text any string
- * @return <code>true</code> when <code>text</code> is a palindrome, <code>false</code> otherwise
+ * @return true when text is a palindrome, false otherwise
  */
 
 public static boolean isPalindrome(String text) {
-    String newString = text.replaceAll("[^a-zA-Z0-9]","");
-    StringBuilder sb_newString = new StringBuilder(newString);
-    boolean fin = newString.equalsIgnoreCase(sb_newString.reverse().toString());
-    return fin;
+    text = text.replaceAll("[^a-zA-Z0-9]","");
+    StringBuilder sb_String = new StringBuilder(text);
+    boolean flag = text.equalsIgnoreCase(sb_String.reverse().toString());
+    return flag;
 }
